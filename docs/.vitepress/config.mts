@@ -27,7 +27,12 @@ export default defineConfig({
       {
         text: "개발",
         link: "/dev",
-        items: [],
+        items: [
+          {
+            text: "vitepress",
+            link: "/dev/vitepress",
+          },
+        ],
         collapsed: true,
       },
     ],
