@@ -11,7 +11,9 @@ export default defineConfig({
       { text: "개발", link: "/dev" },
       { text: "일상", link: "/daily" },
     ],
-
+    search: {
+      provider: "local",
+    },
     sidebar: [
       {
         text: "일상의 끄적임",
@@ -22,7 +24,6 @@ export default defineConfig({
             link: "/daily/live-simple",
           },
         ],
-        collapsed: true,
       },
       {
         text: "개발",
@@ -33,7 +34,6 @@ export default defineConfig({
             link: "/dev/vitepress",
           },
         ],
-        collapsed: true,
       },
     ],
 
