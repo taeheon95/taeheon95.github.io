@@ -1,6 +1,9 @@
 ---
 title: vitepress
-titleTemplate: 나에게 딱 맞는 정적 사이트 제네레이터
+tag: frontend, vue
+description: 나에게 딱 맞는 정적 사이트 제네레이터
+createAt: 2024-11-07
+updateAt: 2024-11-07
 ---
 
 # vitepress

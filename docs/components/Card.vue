@@ -21,10 +21,13 @@ const props = defineProps({
   updateAt: {
     type: String,
     required: true
+  },
+  tag: {
+    type: String,
   }
 });
 
-const { title, url, description, createAt, updateAt } = props;
+const { title, url, description, createAt, updateAt, tag = "" } = props;
 
 const computeTime = (time) => {
   const timeObj = new Date(time);
@@ -36,6 +39,7 @@ const computeTime = (time) => {
   const second = `0${timeObj.getSeconds()}`.slice(-2, 3)
   return `${year}-${month}-${day} ${hour}:${minute}:${second}`
 }
+const tagList = tag.split(',').map((tag) => tag.trim())
 const createAtStr = computed(() => computeTime(createAt))
 const updateAtStr = computed(() => computeTime(updateAt))
 
@@ -45,6 +49,19 @@ const updateAtStr = computed(() => computeTime(updateAt))
 .link {
   text-decoration: none black;
 }
+
+.tagList {
+  list-style: none;
+  display: flex;
+}
+
+.tagItem {
+  background-color: #3451b2;
+  border-radius: 20px;
+  color: white;
+  padding: 0px 5px;
+  margin: 4px;
+}
 </style>
 
 <template>
@@ -52,6 +69,9 @@ const updateAtStr = computed(() => computeTime(updateAt))
     <a class="link" :href="url">
       <section>
         <h2>{{ title }}</h2>
+        <ul class="tagList">
+          <li class="tagItem" v-for="tagItem of tagList">{{ tagItem }}</li>
+        </ul>
         작성일 : <time>{{ createAtStr }}</time>
         수정일 : <time>{{ updateAtStr }}</time>
         <p>
