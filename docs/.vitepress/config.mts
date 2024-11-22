@@ -19,10 +19,6 @@ export default defineConfig({
         text: "일상의 끄적임",
         link: "/daily",
         items: [
-          {
-            text: "단순하게 살기",
-            link: "/daily/live-simple",
-          },
         ],
       },
       {
