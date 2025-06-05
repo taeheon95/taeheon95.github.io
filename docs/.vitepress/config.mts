@@ -18,8 +18,7 @@ export default defineConfig({
       {
         text: "일상의 끄적임",
         link: "/daily",
-        items: [
-        ],
+        items: [],
       },
       {
         text: "개발",
@@ -28,6 +27,10 @@ export default defineConfig({
           {
             text: "vitepress",
             link: "/dev/vitepress",
+          },
+          {
+            text: "log4j2",
+            link: "/dev/log4j2",
           },
         ],
       },
