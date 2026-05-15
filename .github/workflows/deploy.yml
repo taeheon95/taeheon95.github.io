@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0 # lastUpdated가 활성화되지 않은 경우 필요하지 않음
       # - uses: pnpm/action-setup@v3 # pnpm을 사용하는 경우 주석 해제
@@ -36,18 +36,18 @@ jobs:
       #     version: 9
       # - uses: oven-sh/setup-bun@v1 # Bun을 사용하는 경우 주석 해제
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 25
+          node-version: 24
           cache: npm # 또는 pnpm / yarn
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v6
       - name: Install dependencies
         run: npm ci # 또는 pnpm install / yarn install / bun install
       - name: Build with VitePress
         run: npm run docs:build # 또는 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: docs/.vitepress/dist
 
