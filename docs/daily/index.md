@@ -1,5 +1,5 @@
 ---
-title: 일상의 포스트
+title: 일상
 next: 
  text: 개발
  link: /dev

@@ -72,8 +72,12 @@ const updateAtStr = computed(() => computeTime(updateAt))
         <ul class="tagList">
           <li class="tagItem" v-for="tagItem of tagList">{{ tagItem }}</li>
         </ul>
-        작성일 : <time>{{ createAtStr }}</time>
-        수정일 : <time>{{ updateAtStr }}</time>
+        <template v-if="createAt">
+          작성일 : <time>{{ createAtStr }}</time>
+        </template>
+        <template v-if="updateAt">
+          수정일 : <time>{{ updateAtStr }}</time>
+        </template>
         <p>
           {{ description }}
         </p>

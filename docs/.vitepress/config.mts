@@ -16,7 +16,7 @@ export default defineConfig({
     },
     sidebar: [
       {
-        text: "일상의 끄적임",
+        text: "일상",
         link: "/daily",
         items: [],
       },
